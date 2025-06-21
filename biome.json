@@ -1,0 +1,55 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!**/node_modules/**",
+      "!**/.vercel/**",
+      "!**/.next/**",
+      "!**/dist/**"
+    ]
+  },
+  "assist": { "actions": { "source": { "organizeImports": "off" } } },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "trailingCommas": "none",
+      "bracketSpacing": false,
+      "quoteStyle": "single"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "useBlockStatements": "error",
+        "noNonNullAssertion": "off",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "suspicious": {
+        "noConsole": "error"
+      }
+    }
+  }
+}
