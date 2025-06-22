@@ -28,7 +28,7 @@ export const GoToTop = () => {
     <Button
       className={cn(
         isVisible ? 'opacity-100' : 'pointer-events-none opacity-0',
-        'transition-all fixed right-5 bottom-5'
+        'transition-all fixed right-4 bottom-4'
       )}
       arial-label="Go To Top"
       onClick={onClick}
