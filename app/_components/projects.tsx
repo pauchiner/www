@@ -1,5 +1,13 @@
-import { Badge, Button, Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui";
-import { ExternalLink, Package } from "lucide-react";
+import {
+  Badge,
+  Button,
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from '@/components/ui';
+import {ExternalLink, Package} from 'lucide-react';
 import Link from 'next/link';
 
 export const Projects = () => (
@@ -11,13 +19,22 @@ export const Projects = () => (
       <Card>
         <CardHeader>
           <CardTitle className="flex justify-between">
-            <Link href="https://formizee.com" target="_blank" className="flex items-center hover:underline underline-offset-2 flex gap-2">
+            <Link
+              href="https://formizee.com"
+              target="_blank"
+              className="flex items-center hover:underline underline-offset-2 flex gap-2"
+            >
               <span>Formizee</span>
-              <ExternalLink strokeWidth={2} size={12}/>
+              <ExternalLink strokeWidth={2} size={12} />
             </Link>
-            <span className="font-normal text-muted-foreground text-sm">2024</span>
+            <span className="font-normal text-muted-foreground text-sm">
+              2024
+            </span>
           </CardTitle>
-          <CardDescription>An Open Source Forms Platform. Alt to formspree.io, formcarry.com, formester.com </CardDescription>
+          <CardDescription>
+            An Open Source Forms Platform. Alt to formspree.io, formcarry.com,
+            formester.com{' '}
+          </CardDescription>
         </CardHeader>
         <CardFooter className="flex gap-4">
           <Badge variant="outline">Next.js</Badge>
@@ -28,14 +45,21 @@ export const Projects = () => (
       <Card>
         <CardHeader>
           <CardTitle className="flex justify-between">
-            <Link href="https://github.com/pauchiner/pastelnight.nvim" target="_blank" className="flex items-center hover:underline underline-offset-2 flex gap-2">
+            <Link
+              href="https://github.com/pauchiner/pastelnight.nvim"
+              target="_blank"
+              className="flex items-center hover:underline underline-offset-2 flex gap-2"
+            >
               <span>pastelnight.nvim</span>
-              <ExternalLink strokeWidth={2} size={12}/>
+              <ExternalLink strokeWidth={2} size={12} />
             </Link>
-            <span className="font-normal text-muted-foreground text-sm">2024</span>
+            <span className="font-normal text-muted-foreground text-sm">
+              2024
+            </span>
           </CardTitle>
           <CardDescription>
-            Neovim theme inspired in Palenight, support a lot of plugins out-of-the-box.
+            Neovim theme inspired in Palenight, support a lot of plugins
+            out-of-the-box.
           </CardDescription>
         </CardHeader>
         <CardFooter className="flex gap-4">
@@ -46,14 +70,20 @@ export const Projects = () => (
       <Card>
         <CardHeader>
           <CardTitle className="flex justify-between">
-            <Link href="https://github.com/pauchiner/astro-command-palette" target="_blank" className="flex items-center hover:underline underline-offset-2 flex gap-2">
+            <Link
+              href="https://github.com/pauchiner/astro-command-palette"
+              target="_blank"
+              className="flex items-center hover:underline underline-offset-2 flex gap-2"
+            >
               <span>Astro Command Palette</span>
-              <ExternalLink strokeWidth={2} size={12}/>
+              <ExternalLink strokeWidth={2} size={12} />
             </Link>
-            <span className="font-normal text-muted-foreground text-sm">2024</span>
+            <span className="font-normal text-muted-foreground text-sm">
+              2024
+            </span>
           </CardTitle>
           <CardDescription>
-            A lightweight, extensible and fast command palette for astro. 
+            A lightweight, extensible and fast command palette for astro.
           </CardDescription>
         </CardHeader>
         <CardFooter className="flex gap-4">
@@ -70,4 +100,4 @@ export const Projects = () => (
       </Link>
     </Button>
   </section>
-)
+);

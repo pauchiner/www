@@ -5,9 +5,10 @@ export const About = () => (
     </h3>
     <p className="text-sm leading-7 text-balance [&:not(:first-child)]:mt-8">
       Based on Valencia, Spain.
-      <br/>
-      <br/>
-      Interested on computers and tech since childhood, very comfortable learning new technologies, programming since 2016. 
+      <br />
+      <br />
+      Interested on computers and tech since childhood, very comfortable
+      learning new technologies, programming since 2016.
     </p>
   </section>
-)
+);

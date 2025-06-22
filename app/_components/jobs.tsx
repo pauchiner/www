@@ -1,4 +1,4 @@
-import {Card, CardDescription, CardHeader, CardTitle } from "@/components/ui";
+import {Card, CardDescription, CardHeader, CardTitle} from '@/components/ui';
 
 export const Jobs = () => (
   <section id="jobs">
@@ -10,7 +10,9 @@ export const Jobs = () => (
         <CardHeader>
           <CardTitle className="flex justify-between">
             Digital Value
-            <span className="font-normal text-muted-foreground text-sm">2025 - <span className="underline text-medium">NOW</span></span>
+            <span className="font-normal text-muted-foreground text-sm">
+              2025 - <span className="underline text-medium">NOW</span>
+            </span>
           </CardTitle>
           <CardDescription>Full Stack developer</CardDescription>
         </CardHeader>
@@ -19,7 +21,9 @@ export const Jobs = () => (
         <CardHeader>
           <CardTitle className="flex justify-between">
             Iberdrola Nuclear Plant
-            <span className="font-normal text-muted-foreground text-sm">OCT 2023</span>
+            <span className="font-normal text-muted-foreground text-sm">
+              OCT 2023
+            </span>
           </CardTitle>
           <CardDescription>Technical Assitant</CardDescription>
         </CardHeader>
@@ -28,11 +32,13 @@ export const Jobs = () => (
         <CardHeader>
           <CardTitle className="flex justify-between">
             Miguel Ballesteros Viana
-            <span className="font-normal text-muted-foreground text-sm">2022 - 2023</span>
+            <span className="font-normal text-muted-foreground text-sm">
+              2022 - 2023
+            </span>
           </CardTitle>
           <CardDescription>Mobile Developer</CardDescription>
         </CardHeader>
       </Card>
     </div>
   </section>
-)
+);

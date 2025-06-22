@@ -1,5 +1,5 @@
 import {Geist, Geist_Mono} from 'next/font/google';
-import {ThemeProvider} from '@/components/themes';
+import {ThemeProvider, ThemeToggle} from '@/components/themes';
 import type {Metadata} from 'next';
 
 import {cn} from '@/lib/ui';
@@ -44,6 +44,7 @@ export default function RootLayout({
         >
           {children}
           <GoToTop />
+          <ThemeToggle />
         </ThemeProvider>
       </body>
     </html>
