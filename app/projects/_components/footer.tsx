@@ -2,7 +2,7 @@ import {Button} from '@/components/ui';
 import Link from 'next/link';
 
 export const Footer = () => (
-  <footer className="flex flex-col md:flex-row justify-between md:items-center mt-8 gap-4 md:gap-0 mb-6">
+  <footer className="flex-3 max-h-12 flex justify-between items-center mt-8 pb-12">
     <div className="flex gap-2">
       <Button asChild variant="outline" size="icon">
         <Link href="https://github.com/pauchiner" target="_blank">
@@ -25,7 +25,7 @@ export const Footer = () => (
         </Link>
       </Button>
     </div>
-    <span className="text-sm text-balance text-muted-foreground">
+    <span className="text-sm text-muted-foreground">
       © {new Date().getFullYear()} Pau García Chiner. All Rights Reserved.
     </span>
   </footer>
