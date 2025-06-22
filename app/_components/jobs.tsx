@@ -8,9 +8,9 @@ export const Jobs = () => (
     <div className="flex flex-col gap-4 mt-6">
       <Card>
         <CardHeader>
-          <CardTitle className="flex justify-between">
+          <CardTitle className="flex items-center justify-between text-sm sm:text-md">
             Digital Value
-            <span className="font-normal text-muted-foreground text-sm">
+            <span className="font-normal text-muted-foreground text-xs sm:text-sm">
               2025 - <span className="underline text-medium">NOW</span>
             </span>
           </CardTitle>
@@ -19,9 +19,9 @@ export const Jobs = () => (
       </Card>
       <Card>
         <CardHeader>
-          <CardTitle className="flex justify-between">
+          <CardTitle className="flex items-center justify-between text-sm sm:text-md">
             Iberdrola Nuclear Plant
-            <span className="font-normal text-muted-foreground text-sm">
+            <span className="font-normal text-muted-foreground text-xs sm:text-sm">
               OCT 2023
             </span>
           </CardTitle>
@@ -30,9 +30,9 @@ export const Jobs = () => (
       </Card>
       <Card>
         <CardHeader>
-          <CardTitle className="flex justify-between">
+          <CardTitle className="flex items-center justify-between text-sm sm:text-md">
             Miguel Ballesteros Viana
-            <span className="font-normal text-muted-foreground text-sm">
+            <span className="font-normal text-muted-foreground text-xs sm:text-sm">
               2022 - 2023
             </span>
           </CardTitle>
