@@ -3,12 +3,16 @@ export const About = () => (
     <h3 className="text-lg scroll-m-20 underline underline-offset-4 leading-7 [&:not(:first-child)]:mt-2">
       <a href="/#about">ABOUT ME</a>
     </h3>
-    <p className="text-sm leading-7 text-balance [&:not(:first-child)]:mt-8">
+    <p className="text-xs md:text-sm leading-7 text-balance [&:not(:first-child)]:mt-8">
+      From low-level stuff To React + SSR + TS + ...unnecesary things.
+      <br />
+      <br />
+      Not too much of a AI guy, I like to keep things in control and clean.
+      <br />
+      <br />I love open source and design.
+      <br />
+      <br />
       Based on Valencia, Spain.
-      <br />
-      <br />
-      Interested on computers and tech since childhood, very comfortable
-      learning new technologies, programming since 2016.
     </p>
   </section>
 );
