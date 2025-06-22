@@ -7,12 +7,11 @@ export const About = () => (
       From low-level stuff To React + SSR + TS + ...unnecesary things.
       <br />
       <br />
-      Not too much of a AI guy, I like to keep things in control and clean.
+      Not too much of an AI guy, I like to keep things in control and clean.
       <br />
       <br />I love open source and design.
       <br />
-      <br />
-      Based on Valencia, Spain.
+      <br />🥘 Based on Valencia, Spain.
     </p>
   </section>
 );
