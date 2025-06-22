@@ -4,7 +4,7 @@ import type {Metadata} from 'next';
 
 import {cn} from '@/lib/ui';
 import './globals.css';
-import { GoToTop } from '@/components/top';
+import {GoToTop} from '@/components/top';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
