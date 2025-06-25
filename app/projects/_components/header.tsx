@@ -7,7 +7,7 @@ export const Header = () => (
       Projects Archive
     </h1>
     <p className="leading-7 text-sm md:text-md text-muted-foreground text-balance [&:not(:first-child)]:mt-2">
-      Here rest the projects of the last years.
+      Here rest the open-source projects of the last years.
     </p>
     <Button size="sm" variant="outline" className="mt-4" asChild>
       <Link href="/">GO BACK</Link>
