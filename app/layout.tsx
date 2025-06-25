@@ -10,7 +10,7 @@ import {GoToTop} from '@/components/top';
 const font = IBM_Plex_Mono({
   weight: ['400', '500', '700'],
   variable: '--font-mono',
-  subsets: ['latin'],
+  subsets: ['latin']
 });
 
 export const metadata: Metadata = {
