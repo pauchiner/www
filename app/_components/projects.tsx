@@ -28,7 +28,7 @@ const Project = async (props: ProjectProps) => {
     const data = await response.json();
     stars = data?.stargazers_count;
     forks = data?.network_count;
-  } catch (err) {
+  } catch {
     error = true;
   }
 
@@ -59,7 +59,7 @@ const Project = async (props: ProjectProps) => {
           ))}
         </div>
         {error ? (
-          <></>
+          <div />
         ) : (
           <div className="flex gap-4 text-sm text-muted-foreground">
             <span className="flex gap-2 items-center">

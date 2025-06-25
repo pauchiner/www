@@ -81,10 +81,10 @@ export const DataTable = async () => {
 
   try {
     const response = await fetch(
-      `https://api.github.com/users/pauchiner/repos?per_page=100`
+      'https://api.github.com/users/pauchiner/repos?per_page=100'
     );
     data = await response.json();
-  } catch (err) {
+  } catch {
     error = {
       status: 500,
       message: 'Something was wrong when fetching the projects data.'

@@ -1,7 +1,7 @@
 'use client';
 
 import {Button, Input, Label, Textarea} from '@/components/ui';
-import {FormEvent, useState} from 'react';
+import {type FormEvent, useState} from 'react';
 import {cn} from '@/lib/ui';
 
 export const Contact = () => {
@@ -40,9 +40,8 @@ export const Contact = () => {
       setMessage(
         'Your message was sent correctly, I will answer as soon as possible.'
       );
-    } catch (error) {
+    } catch {
       setMessage('Something went wrong, please try again.');
-      console.error(error);
       setError(true);
     }
     form?.reset();
@@ -102,7 +101,7 @@ export const Contact = () => {
             {message}
           </p>
         ) : (
-          <></>
+          <div />
         )}
       </form>
     </section>
