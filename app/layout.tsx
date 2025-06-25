@@ -1,9 +1,9 @@
 import {Geist, Geist_Mono} from 'next/font/google';
-import {ThemeProvider, ThemeToggle} from '@/components/themes';
 import type {Metadata} from 'next';
-
 import {cn} from '@/lib/ui';
 import './globals.css';
+
+import {ThemeProvider, ThemeToggle} from '@/components/themes';
 import {GoToTop} from '@/components/top';
 
 const geistSans = Geist({
@@ -33,7 +33,7 @@ export default function RootLayout({
         className={cn(
           geistSans.variable,
           geistMono.variable,
-          'flex w-full justify-center antialiased'
+          'flex relative w-full justify-center antialiased'
         )}
       >
         <ThemeProvider
