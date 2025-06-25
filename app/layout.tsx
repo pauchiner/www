@@ -4,6 +4,7 @@ import {cn} from '@/lib/ui';
 import './globals.css';
 
 import {ThemeProvider, ThemeToggle} from '@/components/themes';
+import {Analytics} from '@vercel/analytics/next';
 import {GoToTop} from '@/components/top';
 
 const font = IBM_Plex_Mono({
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           {children}
           <GoToTop />
+          <Analytics />
           <ThemeToggle />
         </ThemeProvider>
       </body>
