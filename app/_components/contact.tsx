@@ -1,16 +1,16 @@
-"use client"
+'use client';
 
-import { Button, Input, Label, Textarea } from '@/components/ui';
-import { FormEvent, useState } from 'react';
-import { cn } from '@/lib/ui';
+import {Button, Input, Label, Textarea} from '@/components/ui';
+import {FormEvent, useState} from 'react';
+import {cn} from '@/lib/ui';
 
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const [error, setError] = useState(false);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+    event.preventDefault();
     setLoading(true);
 
     const form = event.currentTarget;
@@ -18,32 +18,36 @@ export const Contact = () => {
 
     try {
       const response = await fetch(
-        "https://api.formizee.com/v1/f/enp_3ygybtPZp4V2SRcgswuAtGk934GH", {
-        headers: { "Content-Type": "application/json" },
-        method: "POST",
-        body: JSON.stringify({
-          name: formData.get("name"),
-          mail: formData.get("email"),
-          message: formData.get("motive"),
-        })
-      })
+        'https://api.formizee.com/v1/f/enp_3ygybtPZp4V2SRcgswuAtGk934GH',
+        {
+          headers: {'Content-Type': 'application/json'},
+          method: 'POST',
+          body: JSON.stringify({
+            name: formData.get('name'),
+            mail: formData.get('email'),
+            message: formData.get('motive')
+          })
+        }
+      );
       const error = await response.json();
 
       if (response.status !== 201) {
-        setMessage(error?.message ?? "Something went wrong, please try again.");
+        setMessage(error?.message ?? 'Something went wrong, please try again.');
         setError(true);
         return;
       }
 
-      setMessage("Your message was sent correctly, I will answer as soon as possible.");
+      setMessage(
+        'Your message was sent correctly, I will answer as soon as possible.'
+      );
     } catch (error) {
-      setMessage("Something went wrong, please try again.");
+      setMessage('Something went wrong, please try again.');
       console.error(error);
       setError(true);
     }
     form?.reset();
     setLoading(false);
-  }
+  };
 
   return (
     <section id="contact">
@@ -82,8 +86,24 @@ export const Contact = () => {
             placeholder="Pau, I contact you because React is dead. Try this new framew..."
           />
         </div>
-        <Button disabled={loading} type="submit">{loading ? "LOADING..." : "SEND"}</Button>
-        {message ? (<p className={cn("animate-in fade-in-0 text-sm font-medium text-center", error ? "text-red-500 dark:text-red-400" : "text-green-500 dark:text-green-400")} aria-live="polite">{message}</p>) : <></>}
+        <Button disabled={loading} type="submit">
+          {loading ? 'LOADING...' : 'SEND'}
+        </Button>
+        {message ? (
+          <p
+            className={cn(
+              'animate-in fade-in-0 text-sm font-medium text-center',
+              error
+                ? 'text-red-500 dark:text-red-400'
+                : 'text-green-500 dark:text-green-400'
+            )}
+            aria-live="polite"
+          >
+            {message}
+          </p>
+        ) : (
+          <></>
+        )}
       </form>
     </section>
   );

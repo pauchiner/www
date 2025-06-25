@@ -28,8 +28,7 @@ const Project = async (props: ProjectProps) => {
     const data = await response.json();
     stars = data?.stargazers_count;
     forks = data?.network_count;
-  }
-  catch (err) {
+  } catch (err) {
     error = true;
   }
 
