@@ -5,7 +5,11 @@ export const Footer = () => (
   <footer className="flex-3 max-h-12 flex justify-between items-center mt-8 pb-12">
     <div className="flex gap-2">
       <Button asChild variant="outline" size="icon">
-        <Link href="https://github.com/pauchiner" target="_blank">
+        <Link
+          aria-label="Github Profile"
+          href="https://github.com/pauchiner"
+          target="_blank"
+        >
           <svg className="size-6" viewBox="0 0 32 32">
             <path
               fill="currentColor"
@@ -15,7 +19,11 @@ export const Footer = () => (
         </Link>
       </Button>
       <Button asChild variant="outline" size="icon">
-        <Link href="https://bsky.app/profile/pauchiner.es" target="_blank">
+        <Link
+          aria-label="Bluesky Profile"
+          href="https://bsky.app/profile/pauchiner.es"
+          target="_blank"
+        >
           <svg className="size-5" viewBox="0 0 256 226">
             <path
               fill="currentColor"
