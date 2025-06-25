@@ -17,7 +17,7 @@ export const ThemeToggle = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild className="fixed top-4 right-4">
+      <DropdownMenuTrigger asChild className="absolute top-4 right-4">
         <Button className="backdrop-blur-md" variant="outline" size="icon">
           <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
