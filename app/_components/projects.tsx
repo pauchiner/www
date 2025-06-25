@@ -20,8 +20,18 @@ interface ProjectProps {
 }
 
 const Project = async (props: ProjectProps) => {
-  const response = await fetch(`https://api.github.com/repos/${props.repo}`);
-  const {stargazers_count: stars, network_count: forks} = await response.json();
+  let stars = 0;
+  let forks = 0;
+  let error = null;
+  try {
+    const response = await fetch(`https://api.github.com/repos/${props.repo}`);
+    const data = await response.json();
+    stars = data?.stargazers_count;
+    forks = data?.network_count;
+  }
+  catch (err) {
+    error = true;
+  }
 
   return (
     <Card>
@@ -49,7 +59,7 @@ const Project = async (props: ProjectProps) => {
             </Badge>
           ))}
         </div>
-        {!response.ok ? (
+        {error ? (
           <></>
         ) : (
           <div className="flex gap-4 text-sm text-muted-foreground">
