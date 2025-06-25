@@ -77,7 +77,6 @@ export const DataTable = async () => {
       `https://api.github.com/users/pauchiner/repos?per_page=100`
     );
     data = await response.json();
-    console.log(data);
   }
   catch (err) {
     error = { status: 500, message: 'Something was wrong when fetching the projects data.' }
