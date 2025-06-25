@@ -1,4 +1,4 @@
-import {Geist, Geist_Mono} from 'next/font/google';
+import {IBM_Plex_Mono} from 'next/font/google';
 import type {Metadata} from 'next';
 import {cn} from '@/lib/ui';
 import './globals.css';
@@ -6,14 +6,10 @@ import './globals.css';
 import {ThemeProvider, ThemeToggle} from '@/components/themes';
 import {GoToTop} from '@/components/top';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const font = IBM_Plex_Mono({
+  weight: ['400', '500', '700'],
+  variable: '--font-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -31,8 +27,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          geistSans.variable,
-          geistMono.variable,
+          font.variable,
           'flex relative w-full justify-center antialiased'
         )}
       >
