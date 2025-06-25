@@ -7,10 +7,10 @@ import {
   TableHeader,
   TableRow
 } from '@/components/ui';
-import {ExternalLink} from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
-const Content = (props: {projects: any[]}) =>
+const Content = (props: { projects: any[] }) =>
   props.projects.map((project: any) => (
     <TableRow key={project.id}>
       <TableCell className="font-medium">
@@ -30,12 +30,31 @@ const Content = (props: {projects: any[]}) =>
         {project.description}
       </TableCell>
       <TableCell className="hidden md:table-cell">
-        <Badge variant="secondary">{project.language}</Badge>
+        <LanguageLabel>{project.language}</LanguageLabel>
       </TableCell>
     </TableRow>
   ));
 
-const Error = (props: {status: number; message: string}) => {
+const LanguageLabel = (props: { children: React.ReactNode }) => {
+  const languageColorMap: Record<string, string> = {
+    TypeScript: "bg-sky-700 dark:bg-sky-600 text-background opacity-80",
+    JavaScript: "bg-yellow-500 dark:bg-yellow-400 text-background opacity-80",
+    Lua: "bg-blue-800 dark:bg-blue-700 text-background opacity-80",
+    Shell: "bg-lime-600 dark:bg-lime-500 text-background opacity-80",
+    Rust: "bg-orange-700 dark:bg-orange-600 text-background opacity-80",
+    C: "bg-gray-500 dark:bg-gray-400 text-background opacity-80",
+    Python: "bg-blue-400 dark:bg-blue-300 text-background opacity-80",
+    Go: "bg-cyan-500 dark:bg-cyan-400 text-background opacity-80",
+    Astro: "bg-violet-500 dark:bg-violet-400 text-background opacity-80",
+    "C#": "bg-purple-700 dark:bg-purple-600 text-background opacity-80",
+  }
+
+  const currentColor = languageColorMap[props.children as string];
+
+  return <Badge className={currentColor} variant="secondary" >{props.children ?? "Other"}</Badge>
+}
+
+const ErrorBoundary = (props: { status: number | undefined; message: string | undefined }) => {
   return (
     <div className="container w-full h-full flex flex-col items-center gap-4 justify-center">
       <h3 className="text-lg font-medium text-red-500 dark:text-red-400">
@@ -50,16 +69,19 @@ const Error = (props: {status: number; message: string}) => {
 };
 
 export const DataTable = async () => {
-  const response = await fetch(
-    `https://api.github.com/users/pauchiner/repos?per_page=100`
-  );
   let error: any = {};
   let data = [];
 
-  if (response.ok) {
+  try {
+    const response = await fetch(
+      `https://api.github.com/users/pauchiner/repos?per_page=100`
+    );
     data = await response.json();
-  } else {
-    error = await response.json();
+    console.log(data);
+  }
+  catch (err) {
+    error = { status: 500, message: 'Something was wrong when fetching the projects data.' }
+
   }
 
   const projects = data
@@ -89,7 +111,7 @@ export const DataTable = async () => {
           </TableBody>
         </Table>
       ) : (
-        <Error status={response.status} message={error?.message} />
+        <ErrorBoundary status={error?.status} message={error?.message} />
       )}
     </div>
   );
