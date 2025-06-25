@@ -1,7 +1,7 @@
 import {Projects} from './_components/projects';
 import {Contact} from './_components/contact';
+import {Footer} from '@/components/footer';
 import {Header} from './_components/header';
-import {Footer} from './_components/footer';
 import {About} from './_components/about';
 import {Jobs} from './_components/jobs';
 

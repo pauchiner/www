@@ -1,6 +1,6 @@
-import {Footer} from './_components/footer';
-import {Header} from './_components/header';
 import {DataTable} from './_components/table';
+import {Header} from './_components/header';
+import {Footer} from '@/components/footer';
 
 export default function Projects() {
   return (
