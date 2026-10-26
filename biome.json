@@ -1,59 +1,62 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
-  "files": {
-    "includes": [
-      "**",
-      "!**/node_modules/**",
-      "!**/.vercel/**",
-      "!**/.next/**",
-      "!**/dist/**"
-    ]
-  },
-  "assist": { "actions": { "source": { "organizeImports": "off" } } },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space"
-  },
-  "javascript": {
-    "formatter": {
-      "arrowParentheses": "asNeeded",
-      "trailingCommas": "none",
-      "bracketSpacing": false,
-      "quoteStyle": "single"
-    }
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "correctness": {
-        "useExhaustiveDependencies": "off",
-        "noUnusedVariables": "error"
-      },
-      "nursery": {
-        "useUniqueElementIds": "off"
-      },
-      "style": {
-        "useBlockStatements": "error",
-        "noNonNullAssertion": "off",
-        "noParameterAssign": "error",
-        "useAsConstAssertion": "error",
-        "useDefaultParameterLast": "error",
-        "useEnumInitializers": "error",
-        "useSelfClosingElements": "error",
-        "useSingleVarDeclarator": "error",
-        "noUnusedTemplateLiteral": "error",
-        "useNumberNamespace": "error",
-        "noInferrableTypes": "error",
-        "noUselessElse": "error"
-      },
-      "a11y": {
-        "noSvgWithoutTitle": "off"
-      },
-      "suspicious": {
-        "noConsole": "error",
-        "noExplicitAny": "off"
-      }
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
+	"files": {
+		"includes": [
+			"**",
+			"!**/node_modules",
+			"!**/.vercel",
+			"!**/.next",
+			"!**/dist"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"correctness": {
+				"useExhaustiveDependencies": "off",
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"useBlockStatements": "error",
+				"noNonNullAssertion": "off",
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			},
+			"suspicious": {
+				"noConsole": { "level": "error", "options": { "allow": ["log"] } }
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "asNeeded",
+			"trailingCommas": "none",
+			"bracketSpacing": false,
+			"quoteStyle": "single"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "off"
+			}
+		}
+	}
 }
