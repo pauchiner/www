@@ -80,7 +80,7 @@ const Project = async (props: ProjectProps) => {
 const PROJECTS: ProjectProps[] = [
 	{
 		title: 'Formizee',
-		href: 'https://formizee.com?ref=pauchiner.es',
+		href: 'https://formizee.com?ref=pauchiner.dev',
 		date: '2024',
 		repo: 'formizee/formizee',
 		description:
@@ -89,7 +89,7 @@ const PROJECTS: ProjectProps[] = [
 	},
 	{
 		title: 'pastelnight.nvim',
-		href: 'https://github.com/pauchiner/pastelnight.nvim?ref=pauchiner.es',
+		href: 'https://github.com/pauchiner/pastelnight.nvim?ref=pauchiner.dev',
 		date: '2024',
 		repo: 'pauchiner/pastelnight.nvim',
 		description:
@@ -98,7 +98,7 @@ const PROJECTS: ProjectProps[] = [
 	},
 	{
 		title: 'Astro Command Palette',
-		href: 'https://github.com/pauchiner/astro-command-palette?ref=pauchiner.es',
+		href: 'https://github.com/pauchiner/astro-command-palette?ref=pauchiner.dev',
 		date: '2024',
 		repo: 'pauchiner/astro-command-palette',
 		description:

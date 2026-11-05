@@ -21,7 +21,7 @@ export const Footer = () => (
 			<Button asChild variant="outline" size="icon">
 				<Link
 					aria-label="Bluesky Profile"
-					href="https://bsky.app/profile/pauchiner.es"
+					href="https://bsky.app/profile/pauchiner.dev"
 					target="_blank"
 				>
 					<svg className="size-5" viewBox="0 0 256 226">
